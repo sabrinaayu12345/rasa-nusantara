@@ -1,0 +1,103 @@
+    /* loding */
+.bg-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #ffffff; /* putih solid */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e06919;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* elemen bermulai rotasi 0 derjat*/
+  }
+
+  100% {
+    transform: rotate(360deg); /* elemen telah berputar 360 derajat penuh searah jarum jam*/
+  }
+}
+
+    /* Navbar */
+    .navbar {
+      background-color: #F38C52;
+    }
+
+    .navbar .nav-link {
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #ffe6d1;
+      font-weight: 600;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: 700;
+    }   
+
+    /* Form Card */
+    .order-card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #fffdfb;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .order-card h3 {
+      background: #f19e4a;
+      color: #fff;
+      padding: 15px;
+      margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+      border-radius: 15px 15px 0 0;
+      font-weight: 600;
+      text-align: center;
+      font-family: serif;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #444;
+    }
+
+    .form-select,
+    .form-control {
+      border-radius: 10px;
+    }
+
+    /* Tombol */
+    .btn-order {
+      background: #f57c00;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-order:hover {
+      background: #e06900;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(245, 124, 0, 0.4);
+    }
+
+    /* Footer */
+    footer {
+      background: #fff5ef;
+      font-size: 14px;
+    }

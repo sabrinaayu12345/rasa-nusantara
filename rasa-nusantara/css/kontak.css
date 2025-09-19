@@ -1,0 +1,117 @@
+/* loding */
+.bg-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #ffffff; /* putih solid */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e06919;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* elemen bermulai rotasi 0 derjat*/
+  }
+
+  100% {
+    transform: rotate(360deg); /* elemen telah berputar 360 derajat penuh searah jarum jam*/
+  }
+}
+/* navbar */
+.custom-navbar {
+  background-color: #F38C52;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: 700;
+}
+
+.custom-navbar .nav-link {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+
+  /* card */
+    /* layanan & keistimewaan section */
+   #kontak h2 {
+    font-size: 30px;
+    font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+  #kontak h5{
+    font-family: serif;
+    font-size: 20px;
+  }
+
+  .card-layanan h3,
+  .card-keistimewaan h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .card-layanan p,
+  .card-keistimewaan p{
+    font-size: 12px;
+  }
+
+  .circle-icon {
+    padding: 19px;
+  }
+
+  .card-layanan,
+  .card-keistimewaan {
+    border-radius: 34px;
+    background-color: white;
+    padding: 40px 20px;
+    transition: all 0.2s ease-in-out;
+    height: 100%;
+    font-size: 16px;
+  }
+
+  /* card hover */
+  .card-kontak {
+  border-radius: 34px;
+  background-color: white;
+  padding: 40px 20px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.card-kontak:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background-color: #f9e2d5;
+}
+
+
+    /* footer */
+  .custom-footer{
+    background-color: #FBF7F5;
+  }

@@ -1,0 +1,142 @@
+/* loding */
+.bg-loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    /* putih solid */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #e06919;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        /* elemen bermulai rotasi 0 derjat*/
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* elemen telah berputar 360 derajat penuh searah jarum jam*/
+    }
+}
+
+
+/* navbar */
+.custom-navbar {
+    background-color: #F38C52;
+
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: 700;
+}
+
+.custom-navbar .nav-link {
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* hero section */
+.hero-beranda {
+    position: relative;
+    height: 500px;
+    background: url("../assets/img/selamat.png") no-repeat center center, red;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(233, 226, 226);
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.keterangan h4 {
+    font-family: Georgia;
+}
+
+#tentang-kami {
+    font-family: serif;
+    font-size: 30px;
+}
+
+
+h2 {
+    font-family: Georgia;
+}
+
+
+    /* layanan & keistimewaan section */
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: serif;
+    }
+
+    .card-layanan h3,
+    .card-keistimewaan h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card-layanan p,
+    .card-keistimewaan p {
+        font-size: 12px;
+    }
+
+    .circle-icon {
+        padding: 19px;
+    }
+
+    .card-layanan,
+    .card-keistimewaan {
+        border-radius: 34px;
+        background-color: #F9E2D5;
+        padding: 40px 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        height: 100%;
+        font-size: 16px;
+    }
+
+    .card-layanan:hover,
+    .card-keistimewaan:hover {
+        background-color: #D9D9D9;
+        transform: translateY(-8px);
+        /* naik sedikit */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        /* bayangan lebih jelas */
+    }
+
+
+    /* footer */
+    .custom-footer {
+        background-color: #FBF7F5;
+    }
+
+

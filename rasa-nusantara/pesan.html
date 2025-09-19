@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rasa Nusantara</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="icon" href="assets/ikon/logo.png" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/pesan.css">
+
+</head>
+
+<body>
+    <!-- loding -->
+    <div class="bg-loader">
+      <div class="loader"></div>
+    </div>
+
+  <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/ikon/logo.png" alt="Bootstrap" width="30">
+          <b>Rasa Nusantara</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link " aria-current="page" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="2menu.html">Menu</a>
+            </li>
+            <li class="nav-item mx-2">
+            <a class="nav-link active" href="3tentang.html">Tentang </a>
+          </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link active" href="4kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Form Pesanan -->
+  <section class="py-5">
+    <div class="container">
+      <div class="card order-card p-4 mx-auto" style="max-width: 650px;" data-aos="zoom-in">
+
+        <h3>Pesan Sekarang</h3>
+
+        <!-- Notifikasi -->
+        <div id="alertSuccess" class="alert alert-success d-none" role="alert">
+          ✅ Pesanan Anda berhasil dikirim!
+        </div>
+
+        <form id="form-pesanan">
+          <div class="mb-3">
+            <label class="form-label" for="nama">Nama</label>
+            <input type="text" class="form-control" id="nama" required>
+            <div id="namaError" class="form-text text-danger"></div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="nohp">No HP</label>
+            <input type="tel" class="form-control" id="nohp" pattern="08[0-9]{8,}" placeholder="081234567890" required>
+            <div id="nohpError" class="form-text text-danger"></div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="menu-utama">Menu Utama</label>
+            <select class="form-select" id="menu-utama" required>
+              <option value="">-- Pilih menu utama --</option>
+              <option value="Sate Ayam">Sate Ayam</option>
+              <option value="Nasi Gudeg Jogja">Nasi Gudeg Jogja</option>
+              <option value="Rendang Padang">Rendang Padang</option>
+              <option value="Rawon Daging">Rawon Daging</option>
+              <option value="Ikan Bakar Jimbaran">Ikan Bakar Jimbaran</option>
+              <option value="Ayam Betutu Bali">Ayam Betutu Bali</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="menu-minuman">Menu Minuman</label>
+            <select class="form-select" id="menu-minuman" required>
+              <option value="">-- Pilih menu minuman --</option>
+              <option value="Es Teh Manis Nusantara">Es Teh Manis Nusantara</option>
+              <option value="Es Cendol Dawet Ayu">Es Cendol Dawet Ayu</option>
+              <option value="Wedang Jahe">Wedang Jahe</option>
+              <option value="Es Kelapa Muda">Es Kelapa Muda</option>
+              <option value="Bajigur Sunda">Bajigur Sunda</option>
+              <option value="Es Jeruk Peras Segar">Es Jeruk Peras Segar</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label" for="menu-dessert">Menu Dessert</label>
+            <select class="form-select" id="menu-dessert" required>
+              <option value="">-- Pilih menu dessert --</option>
+              <option value="Kelepon Pandan">Kelepon Pandan</option>
+              <option value="Dadar Gulung">Dadar Gulung</option>
+              <option value="Es Pisang Ijo Makassar">Es Pisang Ijo Makassar</option>
+              <option value="Kue Lumpur Surabaya">Kue Lumpur Surabaya</option>
+              <option value="Serabi Solo">Serabi Solo</option>
+              <option value="Kolak Pisang Ubi">Kolak Pisang Ubi</option>
+            </select>
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-order py-2" type="submit">Kirim Pesanan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <p class="mb-0">© 2025 Rasa Nusantara | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/bootstrap.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+     $(document).ready(function () {
+        // Tunggu 1.5 detik, lalu fadeout loader
+        setTimeout(function () {
+          $(".bg-loader").fadeOut(1000);
+        }, 1500);
+      });
+
+    AOS.init();
+
+    // Validasi Form
+    document.getElementById("form-pesanan").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nama = document.getElementById("nama").value.trim();
+      const nohp = document.getElementById("nohp").value.trim();
+      const hpPattern = /^08[0-9]{8,}$/;
+
+      let isValid = true;
+
+      if (nama === "") {
+        document.getElementById("namaError").textContent = "Nama wajib diisi!";
+        isValid = false;
+      } else {
+        document.getElementById("namaError").textContent = "";
+      }
+
+      if (!hpPattern.test(nohp)) {
+        document.getElementById("nohpError").textContent = "Nomor HP tidak valid!";
+        isValid = false;
+      } else {
+        document.getElementById("nohpError").textContent = "";
+      }
+
+      if (isValid) {
+        const alertBox = document.getElementById("alertSuccess");
+        alertBox.classList.remove("d-none");
+        this.reset();
+        setTimeout(() => alertBox.classList.add("d-none"), 4000);
+      }
+    });
+  </script>
+</body>
+</html>
